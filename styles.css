@@ -1,19 +1,74 @@
+#calculator-title {
+  text-align: center;
+}
+
 #calculator-container {
   max-width: 400px;
-  height: 500px;
   border: 1px solid #444;
   margin: auto;
   border-radius: 5px;
 }
 
+.strikethrough {
+  text-decoration: line-through;
+  color: palevioletred;
+}
+
 .display {
-  height: 50px;
+  height: 45px;
   background: #333;
   color: #fff;
-  padding: 40px 15px;
-  font-size: 4rem;
+  padding: 35px 35px 50px;
+  font-size: 4em;
   text-align: right;
 }
 
-.buttons {
+.buttons-container {
+  display: grid;
+  grid-template-areas:
+    "add subtract multiply divide"
+    "key7 key8 key9 equal"
+    "key4 key5 key6 equal"
+    "key1 key2 key3 equal"
+    "key0 decimal clear equal";
+  grid-gap: 5px;
+  background-color: #999;
+  padding: 10px;
+}
+
+.buttons-container > div {
+  padding: 20px;
+  background-color: #78787878;
+  text-align: center;
+  font-size: 1.7em;
+  width: 50px;
+}
+
+.add {
+  grid-area: add;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.divide {
+  grid-area: divide;
+}
+.equal {
+  grid-area: equal;
+}
+
+div.equal {
+  padding-top: 120px;
+}
+
+.button:active {
+  background: orange;
+  color: blue;
+  font-weight: 900;
 }
