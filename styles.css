@@ -1,9 +1,14 @@
-#calculator-title {
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.calculator-title {
   text-align: center;
+  padding: 4rem 0 2rem;
 }
 
-#calculator-container {
-  max-width: 400px;
+.calculator-container {
+  width: 368px;
   border: 1px solid #444;
   margin: auto;
   border-radius: 5px;
@@ -15,10 +20,10 @@
 }
 
 .display {
-  height: 45px;
+  height: 40px;
   background: #333;
   color: #fff;
-  padding: 35px 35px 50px;
+  padding: 30px 35px 50px;
   font-size: 4em;
   text-align: right;
 }
@@ -31,17 +36,16 @@
     "key4 key5 key6 equal"
     "key1 key2 key3 equal"
     "key0 decimal clear equal";
-  grid-gap: 5px;
   background-color: #999;
-  padding: 10px;
 }
 
 .buttons-container > div {
   padding: 20px;
-  background-color: #78787878;
+  background-color: #f8e9b9;
   text-align: center;
   font-size: 1.7em;
   width: 50px;
+  border: 1px solid rgb(97, 96, 96);
 }
 
 .add {
@@ -62,13 +66,21 @@
 .equal {
   grid-area: equal;
 }
+.button.equal {
+  background: #fdbc71;
+}
+.button.operator {
+  background: #c6ddc6;
+}
 
 div.equal {
-  padding-top: 120px;
+  padding-top: 130px;
 }
 
 .button:active {
   background: orange;
-  color: blue;
-  font-weight: 900;
+}
+
+.button:hover {
+  color: #fff;
 }
