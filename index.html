@@ -4,37 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="scripts.js" defer></script>
     <title>JS Calculator</title>
   </head>
   <body>
     <h1 class="calculator-title">
       Let's calculate some shit!</span>
     </h1>
-    <div class="calculator-container">
-      <div class="display">
-        0
-      </div>
-      <div class="buttons-container">
-        <div class="button operator" data-action="add">+</div>
-        <div class="button operator" data-action="subtract">-</div>
-        <div class="button operator" data-action="multiply">&times;</div>
-        <div class="button operator" data-action="divide">÷</div>
-        <div class="button key7">7</div>
-        <div class="button key8">8</div>
-        <div class="button key9">9</div>
-        <div class="button key4">4</div>
-        <div class="button key5">5</div>
-        <div class="button key6">6</div>
-        <div class="button key1">1</div>
-        <div class="button key2">2</div>
-        <div class="button key3">3</div>
-        <div class="button key0">0</div>
-        <div class="button decimal" data-action="decimal">.</div>
-        <div class="button clear" data-action="clear">AC</div>
-        <div class="button equal" data-action="equal">=</div>
-      </div>
-    </div>
-    <script type="text/javascript" src="index.js"></script>
+    <div class="calculator-grid">
+			<div class="calculator-display">
+				<div class="previous">123 +</div>
+				<div class="current">456</div>
+			</div>
+			<button class="span-two">AC</button>
+			<button>DEL</button>
+			<button>÷</button>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>*</button>
+			<button>4</button>
+			<button>5</button>
+			<button>6</button>
+			<button>+</button>
+			<button>7</button>
+			<button>8</button>
+			<button>9</button>
+			<button>-</button>
+			<button>.</button>
+			<button>0</button>
+			<button class="span-two">=</button>
+		</div>
   </body>
 </html>
