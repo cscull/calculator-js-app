@@ -1,86 +1,43 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-.calculator-title {
-  text-align: center;
-  padding: 4rem 0 2rem;
+  font-weight: normal;
 }
 
-.calculator-container {
-  width: 368px;
-  border: 1px solid #444;
-  margin: auto;
-  border-radius: 5px;
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
 }
 
-.strikethrough {
-  text-decoration: line-through;
-  color: palevioletred;
-}
-
-.display {
-  height: 40px;
-  background: #333;
-  color: #fff;
-  padding: 30px 20px 50px;
-  font-size: 4em;
-  text-align: right;
-}
-
-.buttons-container {
+.calculator-grid {
   display: grid;
-  grid-template-areas:
-    "add subtract multiply divide"
-    "key7 key8 key9 equal"
-    "key4 key5 key6 equal"
-    "key1 key2 key3 equal"
-    "key0 decimal clear equal";
-  background-color: #999;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.buttons-container > div {
-  padding: 20px;
-  background-color: #f8e9b9;
-  text-align: center;
-  font-size: 1.7em;
-  width: 50px;
-  border: 1px solid rgb(97, 96, 96);
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.add {
-  grid-area: add;
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.subtract {
-  grid-area: subtract;
+.span-two {
+  grid-column: span 2;
 }
 
-.multiply {
-  grid-area: multiply;
-}
-
-.divide {
-  grid-area: divide;
-}
-.equal {
-  grid-area: equal;
-}
-.button.equal {
-  background: #fdbc71;
-}
-.button.operator {
-  background: #c6ddc6;
-}
-
-div.equal {
-  padding-top: 130px;
-}
-
-.button:active {
-  background: orange;
-}
-
-.button:hover {
-  color: #fff;
+.calculator-display {
+  grid-column: 1 / -1;
 }
